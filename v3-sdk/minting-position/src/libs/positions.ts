@@ -75,6 +75,8 @@ export async function mintPosition(): Promise<TransactionState> {
     )
   )
 
+  console.log(positionToMint);
+
   const mintOptions: MintOptions = {
     recipient: address,
     deadline: Math.floor(Date.now() / 1000) + 60 * 20,
