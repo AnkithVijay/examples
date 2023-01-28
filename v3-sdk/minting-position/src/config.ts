@@ -1,6 +1,6 @@
 import { Token } from '@uniswap/sdk-core'
 import { FeeAmount } from '@uniswap/v3-sdk'
-import { DAI_TOKEN, USDC_TOKEN } from './libs/constants'
+import { UNI_TOKEN, WETH_TOKEN } from './libs/constants'
 
 // Sets if the example should run locally or on chain
 export enum Environment {
@@ -32,21 +32,21 @@ export interface ExampleConfig {
 // Example Configuration
 
 export const CurrentConfig: ExampleConfig = {
-  env: Environment.LOCAL,
+  env: Environment.WALLET_EXTENSION,
   rpc: {
-    local: 'http://localhost:8545',
-    mainnet: '',
+    local: 'https://goerli.infura.io/v3/3c221e60e7a2496886ca6b9edc23e6b7',
+    mainnet: 'https://goerli.infura.io/v3/3c221e60e7a2496886ca6b9edc23e6b7',
   },
   wallet: {
-    address: '0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266',
+    address: '0x750F225371a4e962c24B4Cd3dAACED3003B55873',
     privateKey:
-      '0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80',
+      'e2bc7938291c1884b2513cdbdd70c56b026400ef67e356e050e6457b0c744f08',
   },
   tokens: {
-    token0: USDC_TOKEN,
-    token0Amount: 1000,
-    token1: DAI_TOKEN,
-    token1Amount: 1000,
+    token0: WETH_TOKEN,
+    token0Amount: 0.01,
+    token1: UNI_TOKEN,
+    token1Amount: 0.01,
     poolFee: FeeAmount.LOW,
   },
 }

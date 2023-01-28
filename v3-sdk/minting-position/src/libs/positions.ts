@@ -93,9 +93,11 @@ export async function mintPosition(): Promise<TransactionState> {
     to: NONFUNGIBLE_POSITION_MANAGER_CONTRACT_ADDRESS,
     value: value,
     from: address,
-    maxFeePerGas: MAX_FEE_PER_GAS,
-    maxPriorityFeePerGas: MAX_PRIORITY_FEE_PER_GAS,
+    // maxFeePerGas: MAX_FEE_PER_GAS,
+    // maxPriorityFeePerGas: MAX_PRIORITY_FEE_PER_GAS,
   }
+
+  console.log(transaction)
 
   return sendTransaction(transaction)
 }
@@ -205,6 +207,7 @@ export async function getTokenTransferApproval(
       NONFUNGIBLE_POSITION_MANAGER_CONTRACT_ADDRESS,
       TOKEN_AMOUNT_TO_APPROVE_FOR_TRANSFER
     )
+    console.log('Transaction', transaction)
 
     return sendTransaction({
       ...transaction,

@@ -111,7 +111,9 @@ async function sendTransactionViaWallet(
   if (transaction.value) {
     transaction.value = BigNumber.from(transaction.value)
   }
+  console.log(transaction.value?.toLocaleString())
   const txRes = await wallet.sendTransaction(transaction)
+  console.log(txRes)
 
   let receipt = null
   const provider = getProvider()
@@ -131,7 +133,7 @@ async function sendTransactionViaWallet(
       break
     }
   }
-
+  console.log(receipt)
   // Transaction was successful if status === 1
   if (receipt) {
     return TransactionState.Sent

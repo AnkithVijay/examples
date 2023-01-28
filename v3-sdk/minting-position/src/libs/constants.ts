@@ -11,20 +11,20 @@ export const NONFUNGIBLE_POSITION_MANAGER_CONTRACT_ADDRESS =
 
 // Currencies and Tokens
 
-export const USDC_TOKEN = new Token(
-  SupportedChainId.MAINNET,
-  '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
-  6,
-  'USDC',
-  'USD//C'
+export const UNI_TOKEN = new Token(
+  SupportedChainId.GOERLI,
+  '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
+  18,
+  'UNI',
+  'Uniswap'
 )
 
-export const DAI_TOKEN = new Token(
-  SupportedChainId.MAINNET,
-  '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+export const WETH_TOKEN = new Token(
+  SupportedChainId.GOERLI,
+  '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
   18,
-  'DAI',
-  'Dai Stablecoin'
+  'WETH',
+  'Wrapped Ether'
 )
 
 // Transactions
